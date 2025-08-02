@@ -14,6 +14,93 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div class="container">
+
+    <header>
+      <figure>
+        <img src="assets/images/" alt="Logo Numbers">
+        <figcaption>Numbers</figcaption>
+      </fig>
+    </header>
+    
+    <main>
+      
+      <div class="highlight">
+        <span class="overline">Online - Gratuito</span>
+
+        <h1>Sorteador <br> de Número</h1>
+
+      </div>
+
+      <div class="drawAnumber">
+
+        <div class="numberPicker">
+
+          <h2>Quero Sortear: </h2>
+
+          <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+
+          <div class="flex gap-12 padding-y">
+            <div>
+              <label for="number">Números</label>
+              <input type="number" id="number" name="number">
+            </div>
+            <div>
+              <label for="start">De</label>
+              <input type="number" id="start" name="start">
+            </div>
+            <div>
+              <label for="end">De</label>
+              <input type="number" id="end" name="end">
+            </div>
+          </div>
+
+          <div class="flex items-center gap-8">
+            <button></button>
+            <span>Não repetir número</span>
+          </div>
+
+          <button class="offerButton">Sortear <img src="assets/images/arrow-rigth.svg" alt="Flecha apontada para a direita"></button>
+
+        </div>
+
+        <!-- <div class="result">
+
+          <h2>Resultado do Sorteio</h2>
+          <span>1° Resultado</span>
+
+          <ul>
+            <li></li>
+          </ul>
+
+          <button class="offerButton">Sortear Novamente <img src="assets/images/frame.svg" alt="Ícone de reiniciar"></button>
+
+        </div> -->
+
+      </div>
+
+      <div class="faq">
+
+        <div class="flex gap-8">
+          <img src="assets/images/person.svg" alt="Imagem de uma pessoa">
+          <div>
+            <h3>Como funciona o sorteador de números?</h3>
+            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-8">
+          <img src="assets/images/person.svg" alt="Imagem de uma pessoa">
+          <div>
+            <h3>Posso escolher o intervalo dos números?</h3>
+            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+    
+  </div>
 </body>
 </html>
