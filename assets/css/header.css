@@ -1,0 +1,9 @@
+header {
+  justify-content: center;
+}
+
+@media (width >= 80rem) {
+  header {
+    justify-content: left;
+  }  
+}

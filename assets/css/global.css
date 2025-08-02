@@ -1,5 +1,6 @@
 @import url(variable.css);
 @import url(utility_class.css);
+@import url(header.css);
 @import url(highlight.css);
 @import url(drawAnumber.css);
 @import url(faq.css);
@@ -14,6 +15,16 @@
 body {
   height: 100vh;
   justify-content: center;
+  background-image: linear-gradient(to top, rgb(54, 54, 54), black);
+}
+
+body::before {
+  content: '';
+  background-image: url(../images/line.png);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
 }
 
 .container {
