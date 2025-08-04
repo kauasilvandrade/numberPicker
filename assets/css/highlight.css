@@ -1,3 +1,22 @@
 .highlight {
   grid-area: highlight;
+
+  .overline {
+    font: var(--overline);
+    background-image: linear-gradient(var(--gradient-content));
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (width >= 80rem) {
+   h1 {
+    margin-bottom: 0;
+  }
 }

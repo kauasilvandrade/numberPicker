@@ -1,9 +1,17 @@
 header {
   justify-content: center;
+  margin-bottom: 2rem;
+  
+  & figcaption {
+    font: 700 1.5rem/130% var(--ff-Sora);
+    color: var(--content-primary);
+    letter-spacing: -0.4%;
+  }
 }
 
 @media (width >= 80rem) {
   header {
     justify-content: left;
+    margin-bottom: 4rem;
   }  
 }

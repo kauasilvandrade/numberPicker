@@ -13,18 +13,19 @@
 }
 
 body {
-  height: 100vh;
-  justify-content: center;
-  background-image: linear-gradient(to top, rgb(54, 54, 54), black);
+  background-color: var(--color-inverse);
+  color: var(--content-secondary);
 }
 
 body::before {
   content: '';
   background-image: url(../images/line.png);
+  background-size: 70%;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50%;
+  height: 36%;
+  opacity: 0.1;
 }
 
 .container {
@@ -41,6 +42,7 @@ ul[role="list"] {
 button {
   background-color: transparent;
   border: none;
+  font: var(--label-md);
 }
 
 main {
@@ -50,7 +52,25 @@ main {
   "faq";
 }
 
+h1, h2, label, button, .overline, figcaption {
+  text-transform: uppercase;
+}
+
+h1 {
+  font: var(--display-md);
+  color: var(--content-primary);
+}
+
+p {
+  font: var(--p-md);
+}
+ 
 @media (width >= 80rem) {
+  body {
+    height: 100vh;
+    justify-content: center;
+  } 
+
   .container {
     --max-width: 80rem;
   }
@@ -59,7 +79,15 @@ main {
     grid-template-areas: 
     "highlight drawAnumber"
     "faq drawAnumber";
-    grid-row-gap: 6.75em;
-    grid-column-gap: 2.3rem;
+    grid-row-gap: 2.37rem;
+    grid-column-gap: 6.75em;
+  }
+
+  h1 {
+    font: var(--display-lg);
+  }
+
+  p {
+    font: var(--p-lg);
   }
 }

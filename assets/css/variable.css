@@ -21,15 +21,15 @@
   --ff-RobotoMono: "Roboto Mono", monospace;
   --ff-RobotoFlex: "Roboto Flex", sans-serif;
 
-  --display-lg: 800 4.5rem/1.3rem var(--ff-Sora);
-  --display-md: 800 2.5rem/1.3rem var(--ff-Sora);
-  --display-sm: 700 2rem/1.3rem var(--ff-Sora);
+  --display-lg: 800 4.5rem/130% var(--ff-Sora);
+  --display-md: 800 2.5rem/130% var(--ff-Sora);
+  --display-sm: 700 2rem/130% var(--ff-Sora);
 
-  --overline: 700 1rem/1.5rem var(--ff-RobotoMono);
+  --overline: 700 1rem/150% var(--ff-RobotoMono);
 
-  --p-lg: 400 1rem/1.5rem var(--ff-RobotoFlex);
-  --p-md: 400 0.875rem/1.5rem var(--ff-RobotoFlex);
-  --p-sm: 400 0.75rem/1.5rem;
-  --label-md: 700 1.25rem/1.5rem var(--ff-RobotoFlex);
-  --label-sm: 700 1rem/1.5rem var(--ff-RobotoFlex);
+  --p-lg: 400 1rem/150% var(--ff-RobotoFlex);
+  --p-md: 400 0.875rem/150% var(--ff-RobotoFlex);
+  --p-sm: 400 0.75rem/150% var(--ff-RobotoFlex);
+  --label-md: 700 1.25rem/150% var(--ff-RobotoFlex);
+  --label-sm: 700 1rem/150% var(--ff-RobotoFlex);
 }
