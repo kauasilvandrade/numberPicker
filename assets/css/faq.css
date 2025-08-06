@@ -1,5 +1,6 @@
 .faq {
   grid-area: faq;
+  padding-block: 5rem;
 
   & div.flex {
     align-items: start;
@@ -12,5 +13,11 @@
     & p {
       font: var(--p-sm);
     }
+  }
+}
+
+@media (width >= 80rem) {
+  .faq {
+    padding-block: 0rem;
   }
 }

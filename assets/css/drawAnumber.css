@@ -1,3 +1,211 @@
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
 .drawAnumber {
   grid-area: drawAnumber;
+
+  & .numberPicker {
+
+    & div.flex {
+      margin-bottom: 1.25rem;
+
+      & label {
+        font: var(--label-sm);
+        color: #767b7f;
+        text-align: center;
+        display: block;
+        margin-bottom: 0.5rem;
+        position: relative;
+        transition: .5s;
+
+        &::before {
+          content: '';
+          height: 1.7rem;
+          width: 2px;
+          background-color: #403d3d;
+          position: absolute;
+          bottom: -3.2rem;
+          left: 4.9rem;
+          z-index: 1;
+          border-radius: 999px;
+          opacity: 0;
+        }
+        &::after {
+          content: '';
+          background-image: linear-gradient(var(--gradient-border));
+          border-radius: 8px;
+          display: block;
+          height: 3.8rem;
+          width: 5.6rem;
+          position: absolute;
+          bottom: -4.2rem;
+          left: -0.1rem;
+          z-index: -1;
+          transition: opacity .6s;
+          opacity: 0;
+        }
+        
+      }
+      
+      & input {
+        background-color: var(--background-secondary);
+        border: none;
+        color: var(--content-primary);
+        font: var(--display-sm);
+        display: block;
+        width: 5.37rem;
+        border-radius: 8px;
+        text-align: center;
+        outline: none;
+        padding: 0.5rem;
+        position: relative;
+        transition: .5s;
+        
+        caret-color: transparent;
+        
+        &:hover, &:focus {
+          background-color: var(--background-brand);
+        }
+
+      }
+      
+      .inputBox:has(input:hover) label, .inputBox:has(input:focus) label    {
+        color: var(--accent-pink);
+      }
+      .inputBox:has(input:hover) label::before, .inputBox:has(input:focus) label::before  {
+        animation: appear 900ms infinite;
+      }
+      .inputBox:has(input:hover) label::after, .inputBox:has(input:focus) label::after  {
+        opacity: 1;
+      }
+
+      /* SEGUNDA DIV */
+      & div.gap-8 {}
+      
+      & #btnNoRepeat {
+        background-color: #9f9e9e;
+        height: 1.25rem;
+        width: 1.8rem;
+        position: relative;
+        border-radius: 999px;
+        outline: none;
+        cursor: pointer;
+        
+        &::before {
+          content: '';
+          background-color: var(--content-primary);
+          height: 0.875rem;
+          width: 0.875rem;
+          border-radius: 50%;
+          position: absolute;
+          left: 2px;
+          top: 3px;
+          transition: .4s;
+        }
+
+        &:focus {
+          background-image: linear-gradient(var(--gradient-background));
+        }
+        &:focus::before {
+          left: 12px;
+        }
+
+      }
+
+      & span {
+        font: 200 0.75rem / 150% "Sora";
+      }
+
+    }
+
+  }
+
+  .result {
+    text-align: center;
+
+    h2 {
+      margin-bottom: 0.3rem;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        color: var(--content-brand);
+        font: 700 3rem/150% var(--ff-RobotoMono);
+      }
+
+    }
+
+  }
+
+  & button:not(#btnNoRepeat) {
+    background-color: var(--background-tertiary);
+    width: 100%;
+    border-radius: 8px;
+    justify-content: center;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: .5s;
+
+    &:hover, &:focus {
+      background-color: var(--background-primary);
+    }
+
+    &:hover::before, &:focus::before {
+      background-image: conic-gradient(from var(--angle),#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    }
+
+    &:hover img , &:focus img {
+      animation: space 500ms alternate infinite;
+    }
+
+    &::before {
+      content: '';
+      border-radius: 8px;
+      display: block;
+      position: absolute;
+      height: 4rem;
+      width: 101%;
+      z-index: -1;
+    }
+
+    img {
+      position: relative;
+    }
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes space {
+  to {
+    left: 0.5rem;
+  } 
+  from {
+    left: 0;
+  }
 }
