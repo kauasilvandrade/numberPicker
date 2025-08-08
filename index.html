@@ -34,7 +34,7 @@
 
       <div class="drawAnumber">
   
-        <!-- <div class="numberPicker">
+        <div class="numberPicker">
 
           <h2>Quero Sortear: </h2>
 
@@ -62,20 +62,20 @@
             </div>
           </div>
 
-          <button class="offerButton flex items-center gap-8">Sortear <img src="assets/images/arrow-rigth.svg" alt="Flecha apontada para a direita"></button>
+          <button id="offerButton" class="offerButton flex items-center gap-8">Sortear <img src="assets/images/arrow-rigth.svg" alt="Flecha apontada para a direita"></button>
 
-        </div> -->
+        </div>
 
-        <div class="result">
+        <div class="resultPicker hidden">
 
           <h2>Resultado do Sorteio</h2>
           <span class="overline">1° Resultado</span>
 
-          <ul role="list" class="padding-y">
+          <ul role="list" class="listNumbers padding-y">
             
           </ul>
 
-          <button class="offerButton flex items-center gap-8">Sortear Novamente <img src="assets/images/frame.svg" alt="Ícone de reiniciar"></button>
+          <button id="resetOfferButton" class="offerButton flex items-center gap-8">Sortear Novamente <img src="assets/images/frame.svg" alt="Ícone de reiniciar"></button>
 
         </div>  
 
@@ -104,5 +104,7 @@
     </main>
     
   </div>
+
+  <script src="assets/js/script.js" defer></script>
 </body>
 </html>
