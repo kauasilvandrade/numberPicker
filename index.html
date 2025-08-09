@@ -44,21 +44,21 @@
             <div class="flex gap-12">
               <div class="inputBox">
                 <label for="number">Números</label>
-                <input type="number" id="number" name="number">
+                <input type="number" id="number" name="number" min="0" maxlength="3">
               </div>
               <div class="inputBox">
                 <label for="start">De</label>
-                <input type="number" id="start" name="start">
+                <input type="number" id="start" name="start" min="0" maxlength="3">
               </div>
               <div class="inputBox">
                 <label for="end">De</label>
-                <input type="number" id="end" name="end">
+                <input type="number" id="end" name="end" min="0" maxlength="3">
               </div>
             </div>
   
             <div class="flex items-center gap-8">
-              <button id="btnNoRepeat"></button>
-              <span>Não repetir número</span>
+              <input type="checkbox" name="checkedNoRepeat" id="checkedNoRepeat"></input>
+              <label for="checkedNoRepeat" class="noRepeatLabel">Não repetir número</label>
             </div>
           </div>
 

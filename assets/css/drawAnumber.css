@@ -15,7 +15,7 @@
     & div.flex {
       margin-bottom: 1.25rem;
 
-      & label {
+      & label:not(.noRepeatLabel) {
         font: var(--label-sm);
         color: #767b7f;
         text-align: center;
@@ -53,7 +53,7 @@
         
       }
       
-      & input {
+      & input:not(.checkedNoRepeat) {
         background-color: var(--background-secondary);
         border: none;
         color: var(--content-primary);
@@ -72,7 +72,7 @@
         &:hover, &:focus {
           background-color: var(--background-brand);
         }
-
+        
       }
       
       .inputBox:has(input:hover) label, .inputBox:has(input:focus) label    {
@@ -84,18 +84,22 @@
       .inputBox:has(input:hover) label::after, .inputBox:has(input:focus) label::after  {
         opacity: 1;
       }
-
-      /* SEGUNDA DIV */
-      & div.gap-8 {}
       
-      & #btnNoRepeat {
-        background-color: #9f9e9e;
-        height: 1.25rem;
-        width: 1.8rem;
-        position: relative;
-        border-radius: 999px;
-        outline: none;
-        cursor: pointer;
+      /* SEGUNDA DIV */
+      &.flex.gap-8 {
+        position: relative; 
+        
+        &::after {
+          content: '';
+          background-color: #9f9e9e;
+          height: 1.25rem;
+          width: 1.8rem;
+          position: absolute;
+          border-radius: 999px;
+          outline: none;
+          cursor: pointer;
+          left: 0rem;
+        } 
         
         &::before {
           content: '';
@@ -107,19 +111,28 @@
           left: 2px;
           top: 3px;
           transition: .4s;
-        }
-
-        &:focus {
+          cursor: pointer;
+          z-index: 1;
+        } 
+        
+        &:has(#checkedNoRepeat:checked)::after {
           background-image: linear-gradient(var(--gradient-background));
         }
-        &:focus::before {
+
+        &:has(#checkedNoRepeat:checked)::before {
           left: 12px;
-        }
-
+        } 
+        
       }
-
-      & span {
-        font: 200 0.75rem / 150% "Sora";
+      
+      & #checkedNoRepeat {
+        opacity: 0;
+        width: 2rem;
+      }
+      
+      & .noRepeatLabel {
+        font: 200 0.85rem / 150% "Sora";
+        cursor: pointer;
       }
 
     }
@@ -182,7 +195,7 @@
 
   }
 
-  & button:not(#btnNoRepeat) {
+  & button {
     background-color: var(--background-tertiary);
     width: 100%;
     border-radius: 8px;

@@ -53,7 +53,7 @@ main {
   "faq";
 }
 
-h1, h2, label, button, .overline, figcaption {
+h1, h2, label:not(.noRepeatLabel), button, .overline, figcaption {
   text-transform: uppercase;
 }
 
